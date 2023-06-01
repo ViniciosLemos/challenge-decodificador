@@ -9,11 +9,17 @@ function btnEncriptar() {
 
 function encriptar (stringEncriptada) {
   let matrizCodigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
-  stringEncriptada = stringEncriptada.toLowerCase();
+  /*e enter
+    i imes
+    a ai
+    o ober
+    u ufat
+  */
+  stringEncriptada = stringEncriptada.toLowerCase();// obriga a digitar sempre em lowercase
 
   for(let i = 0; i < matrizCodigo.length; i++) {
-    if(stringEncriptada.includes(matrizCodigo[i][0])) {
-      stringEncriptada = stringEncriptada.replaceAll(matrizCodigo[i][0], matrizCodigo[i][1]);
+    if(stringEncriptada.includes(matrizCodigo[i][0])) {// se string Encriptada possui matrizCodigo[i][0]
+      stringEncriptada = stringEncriptada.replaceAll(matrizCodigo[i][0], matrizCodigo[i][1]);// string encriptada recebendo a mudança do primeiro elemento pelo segundo da matriz
     }
   }
 
@@ -38,6 +44,7 @@ function desencriptar (stringDesencriptada) {
 
   return stringDesencriptada;
 }
+//basicamente inverteu a logica
 
 const btnCopiar = document.querySelector(".btn-copiar");
 
